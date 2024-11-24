@@ -14,8 +14,7 @@ export class AuthComponent implements OnInit {
   isLoginMode: boolean = true;
   email: string = '';
   password: string = '';
-  firstName: string = '';
-  lastName: string = '';
+  fullName: string = '';
 
   constructor(private route: ActivatedRoute, private router: Router) {}
 
@@ -32,13 +31,7 @@ export class AuthComponent implements OnInit {
       // Perform login logic here
       this.router.navigate(['/home']);
     } else {
-      console.log(
-        'Sign Up with',
-        this.firstName,
-        this.lastName,
-        this.email,
-        this.password
-      );
+      console.log('Sign Up with', this.fullName, this.email, this.password);
     }
   }
 
