@@ -1,32 +1,49 @@
-<div class="flex">
+<div class="flex flex-col h-screen">
+  <!-- Fixed Header -->
   <div
-    class="fixed left-0 top-auto w-64 h-full bg-neutral-900 text-white p-6 shadow-lg"
+    class="bg-neutral-900 text-white p-4 shadow-lg fixed w-full top-0 left-0 z-6"
   >
-    <ul>
-      <li
-        class="text-lg font-semibold py-4 rounded-lg hover:bg-white hover:text-neutral-900 cursor-pointer transition-all"
-      >
-        <p class="text-center">Home</p>
-      </li>
-      <li
-        class="text-lg font-semibold py-4 rounded-lg hover:bg-white hover:text-neutral-900 cursor-pointer transition-all"
-      >
-        <p class="text-center">History</p>
-      </li>
-      <li
-        class="text-lg font-semibold py-4 rounded-lg hover:bg-white hover:text-neutral-900 cursor-pointer transition-all"
-      >
-        <p class="text-center">Update CV</p>
-      </li>
-      <li
-        class="text-lg font-semibold py-4 rounded-lg hover:bg-white hover:text-neutral-900 cursor-pointer transition-all"
-      >
-        <p class="text-center">Log Out</p>
-      </li>
-    </ul>
+    <app-header></app-header>
   </div>
-  <div class="ml-64 p-6">
-    <h1 class="text-2xl font-semibold">Home Page Content</h1>
-    <p>Put your home page content here...</p>
+
+  <div class="flex flex-1 mt-16">
+    <!-- Fixed Sidebar on the left -->
+    <div
+      class="fixed left-0 top-16 w-64 h-full bg-neutral-900 text-white p-6 shadow-lg"
+    >
+      <ul>
+        <li
+          class="text-lg font-semibold py-4 rounded-lg hover:bg-white hover:text-neutral-900 cursor-pointer transition-all"
+        >
+          <p class="text-center">Home</p>
+        </li>
+        <li
+          class="text-lg font-semibold py-4 rounded-lg hover:bg-white hover:text-neutral-900 cursor-pointer transition-all"
+        >
+          <p class="text-center">History</p>
+        </li>
+        <li
+          class="text-lg font-semibold py-4 rounded-lg hover:bg-white hover:text-neutral-900 cursor-pointer transition-all"
+        >
+          <p class="text-center">Update CV</p>
+        </li>
+        <li
+          class="text-lg font-semibold py-4 rounded-lg hover:bg-white hover:text-neutral-900 cursor-pointer transition-all"
+        >
+          <p class="text-center">Log Out</p>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Main Content Area -->
+    <div class="ml-64 w-full p-6 overflow-auto">
+      <h2 class="text-2xl font-semibold mb-4 text-center">
+        Choose Your CV Template
+      </h2>
+      <div class="flex justify-center items-center">
+        <!-- Dynamic content like your <app-cv-templates> component will go here -->
+        <app-cv-templates></app-cv-templates>
+      </div>
+    </div>
   </div>
 </div>

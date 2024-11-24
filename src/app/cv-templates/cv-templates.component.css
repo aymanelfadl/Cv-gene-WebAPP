@@ -1,0 +1,57 @@
+/* cv-templates.component.css */
+
+/* Scroll container setup */
+.overflow-x-auto {
+  overflow-x: auto;
+}
+
+.scroll-smooth {
+  scroll-behavior: smooth;
+}
+
+/* Snap to each image */
+.snap-x {
+  scroll-snap-type: x mandatory;
+}
+
+/* Ensuring the images inside snap to each section */
+.snap-center {
+  scroll-snap-align: center;
+}
+
+/* Styling for each image template (optional) */
+.flex-shrink-0 {
+  flex-shrink: 0;
+}
+
+.w-80 {
+  width: 320px;
+}
+
+.h-96 {
+  height: 384px;
+}
+
+.object-cover {
+  object-fit: cover;
+}
+
+.transition-all {
+  transition: transform 0.5s ease-in-out;
+}
+
+.mt-4 {
+  margin-top: 1rem;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.font-medium {
+  font-weight: 500;
+}
+
+.text-lg {
+  font-size: 1.125rem;
+}

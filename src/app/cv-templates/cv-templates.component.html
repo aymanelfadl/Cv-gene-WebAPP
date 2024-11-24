@@ -1,1 +1,24 @@
-<p>cv-templates works!</p>
+<div class="relative">
+  <!-- Scrollable Image Container -->
+  <div
+    class="overflow-x-auto flex space-x-4 scroll-smooth snap-x snap-mandatory"
+  >
+    <div
+      *ngFor="let template of templates"
+      class="flex-shrink-0 w-80 h-96 bg-gray-300 rounded-lg shadow-lg snap-center"
+    >
+      <img
+        [src]="template"
+        alt="CV Template"
+        class="object-cover w-full h-full rounded-lg transition-all"
+      />
+    </div>
+  </div>
+
+  <!-- Template Names or Indicators (Optional) -->
+  <div class="mt-4 text-center">
+    <p class="font-medium text-lg">
+      Template {{ currentTemplateIndex + 1 }} of {{ templates.length }}
+    </p>
+  </div>
+</div>
