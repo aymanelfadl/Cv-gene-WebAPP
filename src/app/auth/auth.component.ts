@@ -30,6 +30,7 @@ export class AuthComponent implements OnInit {
       // Handle login
       console.log('Login with', this.email, this.password);
       // Perform login logic here
+      this.router.navigate(['/home']);
     } else {
       console.log(
         'Sign Up with',
@@ -38,7 +39,6 @@ export class AuthComponent implements OnInit {
         this.email,
         this.password
       );
-      // Perform sign-up logic here
     }
   }
 
