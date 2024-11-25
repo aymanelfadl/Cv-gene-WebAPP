@@ -1,44 +1,44 @@
-<div class="flex flex-col h-screen">
-  <div class="flex flex-1">
-    <div
-      class="fixed left-0 top-0 w-48 h-full bg-neutral-900 text-white pt-6 px-4 shadow-lg"
-    >
-      <div class="flex items-center justify-center my-4">
-        <h1 class="text-2xl font-extrabold">Cv-GEN</h1>
-      </div>
-      <ul>
-        <li
-          class="text-lg font-semibold my-8 py-4 rounded-lg hover:bg-white hover:text-neutral-900 cursor-pointer transition-all"
-        >
-          <p class="text-center">Home</p>
-        </li>
-        <li
-          class="text-lg font-semibold my-8 py-4 rounded-lg hover:bg-white hover:text-neutral-900 cursor-pointer transition-all"
-        >
-          <p class="text-center">History</p>
-        </li>
-        <li
-          class="text-lg font-semibold my-8 py-4 rounded-lg hover:bg-white hover:text-neutral-900 cursor-pointer transition-all"
-        >
-          <p class="text-center">Update CV</p>
-        </li>
-        <li
-          class="text-lg font-semibold mt-8 py-4 rounded-lg hover:bg-white hover:text-neutral-900 cursor-pointer transition-all"
-        >
-          <p class="text-center">Log Out</p>
-        </li>
-      </ul>
+<div class="flex h-screen">
+  <div
+    class="fixed left-0 top-0 w-48 h-full bg-neutral-900 text-white pt-6 px-4 shadow-lg"
+  >
+    <div class="flex items-center justify-center my-4">
+      <h1 class="text-2xl font-extrabold">Cv-GEN</h1>
     </div>
-
-    <!-- Main Content Area -->
-    <div class="ml-64 w-full p-6 overflow-auto">
-      <h2 class="text-2xl font-semibold mb-4 text-center">
-        Choose Your CV Template
-      </h2>
-      <div class="flex justify-center items-center">
-        <!-- Dynamic content like your <app-cv-templates> component will go here -->
-        <app-cv-templates></app-cv-templates>
-      </div>
+    <ul>
+      <li
+        class="text-lg font-semibold my-8 py-4 rounded-lg hover:bg-white hover:text-neutral-900 cursor-pointer transition-all"
+      >
+        <p class="text-center">Home</p>
+      </li>
+      <li
+        class="text-lg font-semibold my-8 py-4 rounded-lg hover:bg-white hover:text-neutral-900 cursor-pointer transition-all"
+      >
+        <p class="text-center">History</p>
+      </li>
+      <li
+        class="text-lg font-semibold my-8 py-4 rounded-lg hover:bg-white hover:text-neutral-900 cursor-pointer transition-all"
+      >
+        <p class="text-center">Update CV</p>
+      </li>
+      <li
+        class="text-lg font-semibold mt-8 py-4 rounded-lg hover:bg-white hover:text-neutral-900 cursor-pointer transition-all"
+      >
+        <p class="text-center">Log Out</p>
+      </li>
+    </ul>
+  </div>
+  <!-- Main Content Area -->
+  <div class="flex-1 p-4 h-auto ml-48">
+    <h1 class="text-4xl font-extrabold text-neutral-800 text-center">
+      Welcome to Cv-GEN
+    </h1>
+    <p class="text-lg font-medium text-neutral-700 my-2 text-center">
+      With our templates, you can easily create a CV. Choose your CV template
+      below.
+    </p>
+    <div class="flex flex-1 justify-center h-full w-full max-w-4xl max-h-4xl">
+      <app-cv-templates></app-cv-templates>
     </div>
   </div>
 </div>

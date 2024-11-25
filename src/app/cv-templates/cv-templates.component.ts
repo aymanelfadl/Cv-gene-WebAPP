@@ -9,25 +9,18 @@ import { CommonModule } from '@angular/common';
   standalone: true,
 })
 export class CvTemplatesComponent {
-  // Array of CV template images (replace with actual image URLs)
-  templates: string[] = [
-    'https://via.placeholder.com/500x300?text=Template+1',
-    'https://via.placeholder.com/500x300?text=Template+2',
-    'https://via.placeholder.com/500x300?text=Template+3',
-    // Add more template image URLs as needed
-  ];
+  templates: string[] = ['1.jpg', '2.png', '2.png'];
 
   currentTemplateIndex: number = 0;
 
-  // Logic for auto-scrolling (optional)
   autoScroll() {
     setInterval(() => {
       if (this.currentTemplateIndex < this.templates.length - 1) {
         this.currentTemplateIndex++;
       } else {
-        this.currentTemplateIndex = 0; // Reset to first template when reaching the last
+        this.currentTemplateIndex = 0;
       }
-    }, 3000); // Auto-scroll every 3 seconds (adjust as needed)
+    }, 10000);
   }
 
   ngOnInit() {
