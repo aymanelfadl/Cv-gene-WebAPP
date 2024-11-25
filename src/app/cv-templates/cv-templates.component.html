@@ -1,7 +1,7 @@
 <div class="flex flex-1 justify-center">
   <div class="flex items-center space-x-4">
     <button
-      class="px-4 py-4 font-bold bg-neutral-900 hover:bg-white hover:text-black text-white rounded"
+      class="px-4 py-4 font-bold bg-neutral-900 hover:bg-white hover:text-black text-white rounded hover:border-2 hover:border-slate-300 shadow-2xl"
       (click)="
         currentTemplateIndex =
           (currentTemplateIndex - 1 + templates.length) % templates.length
@@ -16,7 +16,7 @@
       style="width: 100%; max-width: 350px; height: auto"
     />
     <button
-      class="px-4 py-4 font-bold bg-neutral-900 hover:bg-white hover:text-black text-white rounded"
+      class="px-4 py-4 font-bold bg-neutral-900 hover:bg-white hover:text-black text-white rounded hover:border-2 hover:border-slate-300 shadow-2xl"
       (click)="
         currentTemplateIndex = (currentTemplateIndex + 1) % templates.length
       "
