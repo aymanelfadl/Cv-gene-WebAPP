@@ -25,3 +25,227 @@
     </button>
   </div>
 </div>
+<div class="flex justify-center my-4 w-full">
+  <button
+    class="p-6 font-black bg-neutral-900 hover:bg-white hover:text-black text-white rounded-xl mt-4 hover:border-2 hover:border-slate-300 shadow-2xl"
+    (click)="openPopup()"
+  >
+    Generate CV
+  </button>
+</div>
+<!-- Popup form -->
+<div
+  *ngIf="showPopup"
+  class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50"
+>
+  <div class="bg-white p-8 rounded-lg shadow-lg max-w-md w-full">
+    <h2 class="text-2xl font-semibold mb-4">Complete Your CV</h2>
+    <form (ngSubmit)="onSubmitPopupForm()">
+      <div class="mb-4">
+        <label for="name" class="block text-sm font-medium text-gray-700"
+          >Name:</label
+        >
+        <input
+          type="text"
+          id="name"
+          [(ngModel)]="popupFormData.name"
+          name="name"
+          required
+          class="w-full px-4 py-2 border border-gray-300 rounded-md"
+        />
+      </div>
+      <div class="mb-4">
+        <label for="email" class="block text-sm font-medium text-gray-700"
+          >Email:</label
+        >
+        <input
+          type="email"
+          id="email"
+          [(ngModel)]="popupFormData.email"
+          name="email"
+          required
+          class="w-full px-4 py-2 border border-gray-300 rounded-md"
+        />
+      </div>
+      <div class="mb-4">
+        <label for="city" class="block text-sm font-medium text-gray-700"
+          >City:</label
+        >
+        <input
+          type="text"
+          id="city"
+          [(ngModel)]="popupFormData.city"
+          name="city"
+          required
+          class="w-full px-4 py-2 border border-gray-300 rounded-md"
+        />
+      </div>
+      <div class="mb-4">
+        <label for="linkdin" class="block text-sm font-medium text-gray-700"
+          >LinkedIn:</label
+        >
+        <input
+          type="text"
+          id="linkdin"
+          [(ngModel)]="popupFormData.linkdin"
+          name="linkdin"
+          required
+          class="w-full px-4 py-2 border border-gray-300 rounded-md"
+        />
+      </div>
+      <div class="mb-4">
+        <label for="data_birth" class="block text-sm font-medium text-gray-700"
+          >Date of Birth:</label
+        >
+        <input
+          type="date"
+          id="data_birth"
+          [(ngModel)]="popupFormData.data_birth"
+          name="data_birth"
+          required
+          class="w-full px-4 py-2 border border-gray-300 rounded-md"
+        />
+      </div>
+      <div class="mb-4">
+        <label for="country" class="block text-sm font-medium text-gray-700"
+          >Country:</label
+        >
+        <input
+          type="text"
+          id="country"
+          [(ngModel)]="popupFormData.country"
+          name="country"
+          required
+          class="w-full px-4 py-2 border border-gray-300 rounded-md"
+        />
+      </div>
+      <div class="flex justify-end space-x-4">
+        <button
+          type="button"
+          (click)="closePopup()"
+          class="px-4 py-2 bg-gray-300 rounded-md"
+        >
+          Cancel
+        </button>
+        <button
+          type="submit"
+          class="px-4 py-2 bg-blue-600 text-white rounded-md"
+        >
+          Submit
+        </button>
+      </div>
+    </form>
+  </div>
+</div>
+<!-- Next form button -->
+<div class="flex justify-center my-4 w-full" *ngIf="showPopup">
+  <button
+    class="p-6 font-black bg-neutral-900 hover:bg-white hover:text-black text-white rounded-xl mt-4 hover:border-2 hover:border-slate-300 shadow-2xl"
+    (click)="showNextForm()"
+  >
+    Next
+  </button>
+</div>
+
+<!-- Education and Experience form -->
+<div
+  *ngIf="showNextPopup"
+  class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50"
+>
+  <div class="bg-white p-8 rounded-lg shadow-lg max-w-md w-full">
+    <h2 class="text-2xl font-semibold mb-4">Education and Experience</h2>
+    <form (ngSubmit)="onSubmitNextPopupForm()">
+      <div class="mb-4">
+        <label for="university" class="block text-sm font-medium text-gray-700"
+          >University:</label
+        >
+        <input
+          type="text"
+          id="university"
+          [(ngModel)]="nextPopupFormData.university"
+          name="university"
+          required
+          class="w-full px-4 py-2 border border-gray-300 rounded-md"
+        />
+      </div>
+      <div class="mb-4">
+        <label for="startYear" class="block text-sm font-medium text-gray-700"
+          >Start Year:</label
+        >
+        <input
+          type="number"
+          id="startYear"
+          [(ngModel)]="nextPopupFormData.startYear"
+          name="startYear"
+          required
+          class="w-full px-4 py-2 border border-gray-300 rounded-md"
+        />
+      </div>
+      <div class="mb-4">
+        <label for="endYear" class="block text-sm font-medium text-gray-700"
+          >End Year:</label
+        >
+        <input
+          type="number"
+          id="endYear"
+          [(ngModel)]="nextPopupFormData.endYear"
+          name="endYear"
+          required
+          class="w-full px-4 py-2 border border-gray-300 rounded-md"
+        />
+      </div>
+      <div class="mb-4">
+        <label for="speciality" class="block text-sm font-medium text-gray-700"
+          >Speciality:</label
+        >
+        <input
+          type="text"
+          id="speciality"
+          [(ngModel)]="nextPopupFormData.speciality"
+          name="speciality"
+          required
+          class="w-full px-4 py-2 border border-gray-300 rounded-md"
+        />
+      </div>
+      <div class="mb-4">
+        <label for="description" class="block text-sm font-medium text-gray-700"
+          >Description:</label
+        >
+        <textarea
+          id="description"
+          [(ngModel)]="nextPopupFormData.description"
+          name="description"
+          required
+          class="w-full px-4 py-2 border border-gray-300 rounded-md"
+        ></textarea>
+      </div>
+      <div class="mb-4">
+        <label for="experience" class="block text-sm font-medium text-gray-700"
+          >Experience:</label
+        >
+        <textarea
+          id="experience"
+          [(ngModel)]="nextPopupFormData.experience"
+          name="experience"
+          required
+          class="w-full px-4 py-2 border border-gray-300 rounded-md"
+        ></textarea>
+      </div>
+      <div class="flex justify-end space-x-4">
+        <button
+          type="button"
+          (click)="closeNextPopup()"
+          class="px-4 py-2 bg-gray-300 rounded-md"
+        >
+          Cancel
+        </button>
+        <button
+          type="submit"
+          class="px-4 py-2 bg-blue-600 text-white rounded-md"
+        >
+          Submit
+        </button>
+      </div>
+    </form>
+  </div>
+</div>
