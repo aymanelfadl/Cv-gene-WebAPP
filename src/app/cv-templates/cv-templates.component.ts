@@ -16,9 +16,6 @@ export class CvTemplatesComponent {
   currentTemplateIndex: number = 0;
   userForm: FormGroup;
   isPopupOpen: boolean = false;
-  closePopup() {
-    this.isPopupOpen = false;
-  }
 
   constructor(private fb: FormBuilder) {
     this.userForm = this.fb.group({
@@ -79,9 +76,30 @@ export class CvTemplatesComponent {
     this.isPopupOpen = true;
   }
 
+  closePopup() {
+    this.isPopupOpen = false;
+    this.resetForm();
+  }
+
   onSubmit() {
     if (this.userForm.valid) {
       console.log(this.userForm.value);
+      this.resetForm();
     }
+  }
+
+  resetForm() {
+    this.userForm.reset({
+      name: '',
+      country: '',
+      city: '',
+      email: '',
+      linkedin: '',
+      date_birth: '',
+      education: this.fb.array([]),
+      work_experience: this.fb.array([]),
+      skills: this.fb.array([]),
+      template_index: this.currentTemplateIndex,
+    });
   }
 }
