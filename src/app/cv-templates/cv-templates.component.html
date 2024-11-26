@@ -1,5 +1,5 @@
 <div class="flex flex-1 justify-center">
-  <div class="flex items-center space-x-4">
+  <div class="flex items-center space-x-2">
     <button
       class="px-4 py-4 font-bold bg-neutral-900 hover:bg-white hover:text-black text-white rounded hover:border-2 hover:border-slate-300 shadow-2xl"
       (click)="
@@ -13,7 +13,7 @@
       [src]="templates[currentTemplateIndex]"
       alt="CV Template"
       class="template-image"
-      style="width: 100%; max-width: 350px; height: auto"
+      style="width: 100%; max-width: 350px; height: 80%"
     />
     <button
       class="px-4 py-4 font-bold bg-neutral-900 hover:bg-white hover:text-black text-white rounded hover:border-2 hover:border-slate-300 shadow-2xl"
@@ -25,9 +25,9 @@
     </button>
   </div>
 </div>
-<div class="flex justify-center my-4 w-full">
+<div class="flex justify-center w-full">
   <button
-    class="p-6 font-black bg-neutral-900 hover:bg-white hover:text-black text-white rounded-xl mt-4 hover:border-2 hover:border-slate-300 shadow-2xl"
+    class="p-4 mb-8 font-black bg-neutral-900 hover:bg-white hover:text-black text-white rounded-xl hover:border-2 hover:border-slate-300 shadow-2xl"
     (click)="openPopup()"
   >
     Generate CV
