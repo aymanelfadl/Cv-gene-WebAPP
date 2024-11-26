@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { FormBuilder, FormGroup, FormArray, Validators } from '@angular/forms';
+import { SpeakerWaveIcon } from '@heroicons/vue/16/solid';
 
 @Component({
   selector: 'app-cv-templates',
@@ -49,9 +50,11 @@ export class CvTemplatesComponent {
   addEducation() {
     this.education.push(
       this.fb.group({
-        degree: ['', Validators.required],
-        institution: ['', Validators.required],
-        year: ['', Validators.required],
+        university: ['', Validators.required],
+        start_year: ['', Validators.required],
+        end_year: ['', Validators.required],
+        speciality: ['', Validators.required],
+        descreption: ['', Validators.required],
       })
     );
   }
@@ -59,9 +62,11 @@ export class CvTemplatesComponent {
   addWorkExperience() {
     this.work_experience.push(
       this.fb.group({
-        job_title: ['', Validators.required],
-        company: ['', Validators.required],
-        years: ['', Validators.required],
+        post: ['', Validators.required],
+        start_year: ['', Validators.required],
+        end_year: ['', Validators.required],
+        company_name: ['', Validators.required],
+        description: ['', Validators.required],
       })
     );
   }
