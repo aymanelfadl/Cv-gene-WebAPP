@@ -85,6 +85,7 @@ export class CvTemplatesComponent {
     if (this.userForm.valid) {
       console.log(this.userForm.value);
       this.resetForm();
+      this.isPopupOpen = false;
     }
   }
 
